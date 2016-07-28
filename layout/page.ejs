@@ -2,12 +2,12 @@
 layout: layout
 ---
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>')">
+<header class="intro-header" style="background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>');background-repeat: repeat;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
                 <div class="site-heading">
-                    <h1><%= page.title || config.title %></h1>
+                    <h3><%= page.title || config.title %></h3>
                     <!--<hr class="small">-->
                     <span class="subheading"><%= page.description || config.subtitle || "" %></span>
                 </div>
@@ -143,10 +143,19 @@ layout: layout
                             </a>
                         </li>
                         <% } %>
-
+                        <% if (config.douban_username) { %>
+                        <li>
+                            <a target="_blank" href="https://www.douban.com/people/<%= config.douban_username %>">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <% } %>
                         <% if (config.weibo_username) { %>
                         <li>
-                            <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+                            <a target="_blank" href="http://weibo.com/u/<%= config.weibo_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>

@@ -373,11 +373,11 @@ pre code {
 }
 .intro-header {
   background: no-repeat center center;
-  background-color: #808080;
+  background-color: #566C73;
   background-attachment: scroll;
-  -webkit-background-size: cover;
+  /*-webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
   -o-background-size: cover;
   margin-bottom: 0px;
   /* 0 on mobile, modify by Hux */
